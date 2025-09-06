@@ -1,0 +1,48 @@
+//calculator 
+function calculator(a,b,op){
+    let output;
+    switch(op){
+        case '+':
+            output = a + b;
+            break;
+        case '-':
+            output = a - b;
+            break;
+        case '*':
+            output = a * b;
+            break;
+        case '/':
+            output = a / b;
+            break;
+            }
+        return output;
+}
+console.log("The addition of 10+5 is:",calculator(10,5,'+'));
+console.log("The subtraction of 10-5 is:",calculator(10,5,'-'));
+console.log("The multiplication of 10*5 is:",calculator(10,5,'*'));
+console.log("The division of 10/5 is:",calculator(10,5,'/'));
+
+//map
+let arr=[2,5,3,8,10];
+let newArr=arr.map((value)=>
+    {value**2}
+);
+console.log(newArr);
+
+//Greatest number
+let number=[5,12,19,21];
+let max=Math.max(...number);
+let Greatest=number.find((value)=>(value==max));
+console.log("The greatest number is:",Greatest);
+
+//clone
+let orig=[10,20,30];
+let clone=[...orig];
+console.log("The cloned array is:",clone);
+
+//reduce
+let arr1=[5,10,15,20];
+let sum=arr1.reduce((acc,cur)=>
+    acc+cur,0
+);
+console.log("The sum of the array is:",sum);
