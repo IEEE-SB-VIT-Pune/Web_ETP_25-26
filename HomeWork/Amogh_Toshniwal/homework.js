@@ -1,0 +1,55 @@
+//Calculator 
+a = 10;
+b = 5;
+
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  if (b === 0) {
+    return "Error";
+  }
+  return a / b;
+}
+
+console.log("Addition:", add(a, b));
+console.log("Subtraction:", subtract(a, b));
+console.log("Multiplication:", multiply(a, b));
+console.log("Division:", divide(a, b));
+
+
+//sq numbers in [2,4,6,8]]
+
+const arrary1 = [2, 4, 6, 8];
+const sqarray1 = arrary1.map((num) => num * num);
+console.log("Squared Numbers:", sqarray1);
+
+
+//use .find() to get the first num greater than 15 from [5,12,19,21]
+
+const array2 = [5, 12, 19, 21];
+const num15 = array2.find((num) => num > 15);
+console.log("First number greater than 15:", num15);
+
+
+// 4. Clone an array arr = [10, 20, 30] using the spread operator.
+
+const array3 = [10, 20, 30];
+const clone = [...array3];
+console.log("Cloned Array:", clone);
+
+
+//5 Use .reduce() to find the sum of [5, 10, 15, 20].
+
+const array4 = [5, 10, 15, 20];
+const sum = array4.reduce((acc, curr) => acc + curr, 0);
+console.log("Sum : ", sum);
