@@ -1,0 +1,39 @@
+let x = 10;
+let y = 5;
+
+function addNums(m, n) {
+  return m + n;
+}
+
+function subNums(m, n) {
+  return m - n;
+}
+
+function mulNums(m, n) {
+  return m * n;
+}
+
+function divNums(m, n) {
+  return n === 0 ? "Error: Cannot divide by zero" : m / n;
+}
+
+console.log("Addition:", addNums(x, y));
+console.log("Subtraction:", subNums(x, y));
+console.log("Multiplication:", mulNums(x, y));
+console.log("Division:", divNums(x, y));
+
+const nums1 = [2, 4, 6, 8];
+const squared = nums1.map(v => v ** 2);
+console.log("Squared Numbers:", squared);
+
+const nums2 = [5, 12, 19, 21];
+const greaterThan15 = nums2.find(v => v > 15);
+console.log("First number greater than 15:", greaterThan15);
+
+const nums3 = [10, 20, 30];
+const copyArr = [...nums3];
+console.log("Cloned Array:", copyArr);
+
+const nums4 = [5, 10, 15, 20];
+const total = nums4.reduce((a, b) => a + b, 0);
+console.log("Sum:", total);
