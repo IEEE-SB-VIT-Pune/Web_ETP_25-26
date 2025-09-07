@@ -1,0 +1,50 @@
+//Calculator
+function add(a,b){
+    return a+b;
+}
+function subtract(a,b){
+    return a-b;
+}
+function multiply(a,b){
+    return a*b;
+}
+function divide(a,b){
+    if(b !== 0){
+        return a/b;
+    } else {
+        return "Division by zero error";
+    }
+}
+function power(a,b){
+    return Math.pow(a,b);
+}
+function modulo(a,b){
+    return a%b;
+}
+
+let a=3,b=4;
+console.log("Addition: ", add(a,b));
+console.log("Subtraction: ", subtract(a,b));
+console.log("Multiplication: ", multiply(a,b));
+console.log("Division: ", divide(a,b));
+console.log("Power: ", power(a,b));
+console.log("Modulo: ", modulo(a,b));
+
+//squaring numbers
+arr1=[2,4,6,8]
+arr2=arr1.map(sq=>sq*sq);
+console.log("Original Array: ", arr1);
+console.log("Squared Array: ", arr2);
+
+//find
+arr3=[9,12,14,17,21]
+let found=arr3.find(n=>n>15);
+console.log("First number greater than 15 is: ", found);
+
+//clone
+let clonedArray = [...arr1];
+console.log("Cloned Array: ", clonedArray);
+
+//reduce
+let sum=arr1.reduce((acc,n)=>acc+n,0);
+console.log("Sum of arr1: ", sum);
