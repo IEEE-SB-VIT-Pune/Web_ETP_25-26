@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 2</title>
+
+    <style>
+      .completed {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    Question 2: To-Do List Mini (Simplified Version)
+
+    👉 Create a simple task list with: One input box and Add Task button. 
+        Every new task should appear in a <ul> list.
+        When you click on a task, it should toggle strike-through (completed).
+        Bonus: Add a “Clear All” button that removes all tasks at once. 
+        
+    What you’ll practice: createElement, appendChild (creating content dynamically) 
+    classList. toggle (changing classes) Event handling (click for both adding
+    and toggling tasks) innerHTML = "" (clearing content)
+    -->
+
+    <input type="text" id="taskInput" />
+    <button id="addTask">Add Task</button>
+    <button id="clearAll">Clear All</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+      const taskInput = document.getElementById("taskInput");
+      const addTask = document.getElementById("addTask");
+      const clearAll = document.getElementById("clearAll");
+      const taskList = document.getElementById("taskList");
+
+      addTask.addEventListener("click", () => {
+        const task = taskInput.value.trim();
+
+        if (task === "") return;
+
+        const liEle = document.createElement("li");
+        liEle.textContent = task;
+
+        liEle.addEventListener("click", () => {
+          liEle.classList.toggle("completed");
+        });
+
+        taskList.appendChild(liEle);
+        taskInput.value = "";
+      });
+
+      clearAll.addEventListener("click", () => {
+        taskList.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>
