@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 4</title>
+  </head>
+  <body>
+    <!-- 
+    Question 4: Async/Await Fetch Simulation
+
+    👉 Write an async function fetchData() that: 
+        Waits 2 seconds using setTimeout (wrap inside a Promise). 
+        Returns "User data fetched". Use try/catch 
+        to log the result if success or an error message if it fails.
+        
+    What you’ll practice: Async functions with async/await
+    Awaiting Promises Error handling with try/catch
+    -->
+
+    <h1>Async/Await Fetch</h1>
+    <button id="fetchBtn">Fetch Data</button>
+    <div id="result"></div>
+
+    <script>
+      function fakeFetch() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const success = Math.random() < 0.5;
+            if (success) {
+              resolve("User data fetched");
+            } else {
+              reject("Error fetching data");
+            }
+          }, 2000);
+        });
+      }
+      
+      const resultDiv = document.getElementById("result");
+
+      async function fetchData() {
+        resultDiv.textContent = "Loading...";
+        resultDiv.style.color = "black";
+
+        try {
+          const result = await fakeFetch();
+          resultDiv.textContent = result;
+          resultDiv.style.color = "green";
+        } catch (err) {
+          resultDiv.textContent = err;
+          resultDiv.style.color = "red";
+        }
+      }
+
+      document.getElementById("fetchBtn").addEventListener("click", fetchData);
+    </script>
+  </body>
+</html>
