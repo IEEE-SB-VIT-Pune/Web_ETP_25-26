@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 15px;
+}
+
+.navbar button {
+  margin-right: 5px;
+}
+
+.task-form {
+  margin-bottom: 15px;
+}
+
+.task-form input,
+.task-form select {
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.task-list {
+  margin-top: 10px;
+}
+
+.task-item {
+  margin-bottom: 8px;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: #eee;
+  cursor: pointer;
+}
+
+.green {
+  background: #4caf50;
+  color: white;
+}
+
+.red {
+  background: #e74c3c;
+  color: white;
+}
