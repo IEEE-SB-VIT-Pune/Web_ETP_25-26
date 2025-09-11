@@ -1,0 +1,26 @@
+Introduction & Core Idea
+    1. What is a Single Page Application
+    2. The Problem (How to create diff URLs)
+    3. The Solution: React Router
+
+Setup and Main Components
+    1. Install react-router-dom (npm install react-router-dom)
+    2. Intro to Core Components (done)
+        a. <BrowserRouter>
+        b. <Routes>
+        c. <Route>
+
+Nested Routes & Shared Layouts
+    1. Creating a Layout Route  (Add Navbar with <a>)
+    2. Intro to <Outlet> (Add Outlet)
+
+Navigation with <Link>
+    1. Why not use <a> (done)
+    2. Intro to <Link> (done)
+    3. In short about <NavLink> (done)
+
+Dynamic Routes and URL Parameters
+    1. Defining a Dynamic Route (done)
+    2. Accessing the Parameter with useParams (done)
+
+In short about 404 Pages
