@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Text</title>
+</head>
+<body>
+  <h1 id="heading">Hello</h1>
+  <button id="btn">Click Me</button>
+
+  <script>
+    const heading = document.getElementById("heading");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      heading.textContent = "Welcome to DOM Practice";
+    });
+  </script>
+</body>
+</html>
