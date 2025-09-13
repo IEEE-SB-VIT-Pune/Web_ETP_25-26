@@ -1,0 +1,115 @@
+.todo-app {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+.todo-app > p {
+  text-align: center;
+  color: #fffcfc;
+  font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.add-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.add-form input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-form button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #052b53;
+  color: white;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #050b45;
+  border-bottom: 1px solid #eee;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  word-break: break-all;
+}
+
+.todo-item .buttons button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.todo-item .buttons .delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-form {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.edit-form input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+}
+
+.edit-form button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.edit-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-form button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
