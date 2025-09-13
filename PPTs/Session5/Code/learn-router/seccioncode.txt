@@ -1,0 +1,95 @@
+-------------------- main.jsx --------------------
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="movies" element={<MoviesPage />} />
+          <Route path="movies/:id" element={<MoviesIDPage />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+
+-------------------- Navbar --------------------
+
+import React from "react";
+
+export default function Navbar() {
+  return (
+    <>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/movies">Movies</a></li>
+      </ul>
+    </>
+  );
+}
+
+  // Navbar active link style
+  const activeStyle = {
+    fontWeight: "bold",
+    TextDecoration: "underline",
+    color: "red",
+  };
+
+
+--------------------------- Movie ID -----------------------
+  // if (!movie) {
+  //   return (
+  //     <div className="movie-detail">
+  //       <h2>Movie Not Found</h2>
+  //       <Link to="/movies" className="btn">
+  //         ← Back to Movies
+  //       </Link>
+  //     </div>
+  //   );
+  // }
+
+  import { useParams, Link } from "react-router-dom";
+import moviesData from "../data/moviesData";
+
+export default function MoviesIDPage() {
+  const { id } = useParams();
+  const movie = moviesData.find((m) => m.id === parseInt(id));
+
+  return (
+    <div className="movie-detail">
+      <h1>{movie.title}</h1>
+      <p>🎬 Genre: {movie.genre}</p>
+      <p>🎥 Director: {movie.director}</p>
+      <p>📅 Year: {movie.year}</p>
+      <p>⭐ Rating: {movie.rating}</p>
+
+      <Link to="/movies" className="btn">
+        ← Back to Movies
+      </Link>
+    </div>
+  );
+}
+
+import moviesData from "../data/moviesData";
+import { Link } from "react-router-dom";
+
+export default function MoviesIDPage() {
+  const movie = moviesData.find((m) => m.id === 1);
+
+  return (
+    <div className="movie-detail">
+      <h1>{movie.title}</h1>
+      <p>🎬 Genre: {movie.genre}</p>
+      <p>🎥 Director: {movie.director}</p>
+      <p>📅 Year: {movie.year}</p>
+      <p>⭐ Rating: {movie.rating}</p>
+
+      <Link to="/movies" className="btn">
+        ← Back to Movies
+      </Link>
+    </div>
+  );
+}
+

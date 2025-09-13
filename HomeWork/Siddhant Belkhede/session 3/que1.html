@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1</title>
+  </head>
+  <body>
+    <!-- 
+    Question 1: Ahhange Text on Button Click
+    
+    👉  Make a page with a heading (<h1>) and a button.
+        When the button is clicked, the text of the heading
+        should change from “Hello” to “Welcome to DOM Practice”.
+        
+    What you’ll practice: Selecting elements (getElementById) Changing text
+    (textContent or innerText) Using addEventListener("click", …)
+    -->
+
+    <h1 id="heading">Hello</h1>
+    <button id="btn">Click Me</button>
+
+    <script>
+      const heading = document.getElementById("heading");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", () => {
+        heading.innerText = "Welcome to DOM Practice";
+      });
+    </script>
+  </body>
+</html>
